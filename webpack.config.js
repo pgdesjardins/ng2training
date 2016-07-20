@@ -15,7 +15,6 @@ module.exports = {
   plugins: [
     new webpack.optimize.UglifyJsPlugin(),
     new HtmlWebpackPlugin({
-        baseHref: '/',
         template: './src/index.ejs',
         inject: 'body'
       })
