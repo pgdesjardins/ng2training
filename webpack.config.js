@@ -1,5 +1,7 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var failPlugin = require('webpack-fail-plugin');;
+
 module.exports = {
   entry: './src/app.ts',
   output: {
@@ -13,16 +15,29 @@ module.exports = {
   },
 
   plugins: [
+    failPlugin,
     new webpack.optimize.UglifyJsPlugin(),
     new HtmlWebpackPlugin({
-        baseHref: '/',
-        template: './src/index.ejs',
-        inject: 'body'
-      })
+      baseHref: '/',
+      template: './src/index.ejs',
+      inject: 'body'
+    })
   ],
   module: {
+    preLoaders: [
+      {
+        test: /\.ts$/,
+        loader: 'tslint'
+      }
+    ],
     loaders: [
-      { test: /\.ts$/, loader: 'ts' }
+      { test: /\.ts$/,
+        loader: 'ts'
+      }
     ]
+  },
+  tslint: {
+    emitErrors: true,
+    failOnHint: true
   }
 }
