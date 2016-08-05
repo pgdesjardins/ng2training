@@ -19,7 +19,7 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin(),
     new HtmlWebpackPlugin({
       baseHref: '/',
-      template: './src/index.ejs',
+      template: './src/index.html',
       inject: 'body'
     })
   ],
@@ -33,6 +33,9 @@ module.exports = {
     loaders: [
       { test: /\.ts$/,
         loader: 'ts'
+      },
+      { test: /\.scss$/,
+        loader: 'style!css!postcss!sass'
       }
     ]
   },

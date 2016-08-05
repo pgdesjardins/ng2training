@@ -1,21 +1,29 @@
 {
-  "name": "Ng2Session1",
+  "name": "demo",
   "version": "1.0.0",
   "scripts": {
-    "tsc": "tsc",
-    "webpack": "webpack",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "start": "npm run server"
   },
   "devDependencies": {
+    "css-loader": "^0.23.1",
     "html-webpack-plugin": "^2.22.0",
+    "node-sass": "^3.8.0",
+    "postcss-loader": "^0.9.1",
+    "resolve-url-loader": "^1.6.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
     "ts-loader": "^0.8.2",
     "tsd": "^0.6.5",
     "tslint": "^3.14.0",
     "tslint-loader": "^2.1.5",
     "typescript": "^1.8.10",
+    "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-fail-plugin": "^1.0.5"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.2"
   }
 }
