@@ -2,6 +2,12 @@
   "name": "demo",
   "version": "1.0.0",
   "scripts": {
+    "sass": "npn run sass",
+    "ts-lint": "tslint",
+    "tsc": "npm run tsc",
+    "typings": "typings",
+    "webpack": "webpack",
+    "webpack-dev-server": "webpack-dev-server",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "start": "npm run server"
   },
@@ -14,7 +20,6 @@
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "ts-loader": "^0.8.2",
-    "tsd": "^0.6.5",
     "tslint": "^3.14.0",
     "tslint-loader": "^2.1.5",
     "typescript": "^1.8.10",
@@ -24,6 +29,7 @@
     "webpack-fail-plugin": "^1.0.5"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.2"
+    "bootstrap": "^4.0.0-alpha.2",
+    "lodash": "^4.14.1"
   }
 }
