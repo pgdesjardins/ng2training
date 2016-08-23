@@ -4,3 +4,4 @@
 /typings/modules
 .idea/
 typings/globals/
+npm-debug.log
