@@ -2,3 +2,5 @@
 /dist
 .DS_Store
 /typings/modules
+.idea/
+typings/globals/
