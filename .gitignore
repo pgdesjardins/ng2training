@@ -1,7 +1,9 @@
-/node_modules
-/dist
 .DS_Store
-/typings/modules
+npm-debug.log
+node_modules/
+dist/
+typings/modules/
+typings/globals/
 .idea/
 typings/globals/
-npm-debug.log
+coverage/

@@ -15,6 +15,12 @@ module.exports = {
   },
 
   module: {
+    preLoaders: [
+      {
+        test: /\.ts$/,
+        loader: 'tslint'
+      }
+    ],
     loaders: [
       {
         test: /\.ts$/,
@@ -49,5 +55,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     })
-  ]
+  ],
+
+  tslint: {
+    emitErrors: true,
+    failOnHint: true
+  }
 };

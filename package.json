@@ -5,17 +5,14 @@
   "name": "demo",
   "version": "1.0.0",
   "scripts": {
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack --config config/webpack.prod.js --progress --profile --bail",
     "postinstall": "typings install",
-    "sass": "npn run sass",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "start": "npm run server",
     "test": "karma start",
-    "tsc": "tsc",
-    "ts-lint": "tslint",
-    "typings": "typings",
-    "webpack": "webpack",
-    "webpack-dev-server": "webpack-dev-server"
+    "test-watch": "karma start --auto-watch --no-single-run",
+    "typings": "typings"
   },
   "devDependencies": {
     "angular2-template-loader": "^0.5.0",
@@ -26,7 +23,9 @@
     "html-webpack-plugin": "^2.22.0",
     "jasmine-core": "^2.4.1",
     "karma": "^1.2.0",
+    "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.0.2",
+    "karma-mocha-reporter": "^2.1.0",
     "karma-phantomjs-launcher": "^1.0.1",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.8.0",

@@ -3,6 +3,7 @@
   "rules": {
     "indent": "spaces",
     "max-line-length": 140,
-    "quotemark": [true, "single"]
+    "quotemark": [true, "single"],
+    "triple-equals": true
   }
 }

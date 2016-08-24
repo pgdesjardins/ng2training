@@ -24,7 +24,15 @@ module.exports = function (config) {
       noInfo: true
     },
 
-    reporters: ['progress'],
+    reporters: ['mocha', 'coverage'],
+    coverageReporter: {
+      dir: 'coverage/',
+      subdir: '.',
+      reporters: [
+        { type: 'text-summary' },
+        { type: 'lcov' }
+      ]
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
