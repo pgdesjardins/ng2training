@@ -5,5 +5,4 @@ dist/
 typings/modules/
 typings/globals/
 .idea/
-typings/globals/
 coverage/

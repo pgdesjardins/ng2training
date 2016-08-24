@@ -36,6 +36,24 @@ module.exports = {
         test: /\.scss$/,
         loader: 'style!css!postcss!sass'
       }
+    ],
+    preLoader: [
+      {
+        // https://github.com/AngularClass/angular2-webpack-starter/blob/master/config/webpack.test.js
+        test: /\.(js|ts)$/,
+        loader: 'source-map-loader',
+        include: helpers.root('src', 'app'),
+        exclude: [/\.(e2e|spec)\.ts$/]
+      }
+    ],
+    postLoaders: [
+      {
+        // https://github.com/AngularClass/angular2-webpack-starter/blob/master/config/webpack.test.js
+        test: /\.(js|ts)$/,
+        loader: 'istanbul-instrumenter',
+        include: helpers.root('src', 'app'),
+        exclude: [/\.(e2e|spec)\.ts$/]
+      }
     ]
   }
 };
