@@ -1,4 +1,4 @@
-import '../../public/css/styles.css';
+import '../../public/css/styles.scss';
 import {Component} from '@angular/core';
 
 @Component({
